@@ -35,7 +35,6 @@ const DeleteContact = () => {
         </DialogHeader>
         <DialogFooter>
           <Button
-            type="submit"
             variant="secondary"
             onClick={() =>
               commonState?.dialogCloseHandler(constants.DELETE_DIALOG)
@@ -44,7 +43,6 @@ const DeleteContact = () => {
             Cancel
           </Button>
           <Button
-            type="submit"
             variant="destructive"
             onClick={() => commonState?.onDeleteHandler()}
           >

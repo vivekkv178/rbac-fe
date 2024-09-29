@@ -100,7 +100,7 @@ const AddContact = () => {
           ))}
         </div>
         <DialogFooter>
-          <Button type="submit" onClick={commonState?.addHandler}>
+          <Button onClick={commonState?.addHandler}>
             {commonState?.saveLoading ? (
               <Loader2 className="h-4 w-4 animate-spin" />
             ) : (

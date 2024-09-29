@@ -129,7 +129,7 @@ const EditUser = () => {
           </div>
         )}
         <DialogFooter>
-          <Button type="submit" onClick={commonState?.updateHandler}>
+          <Button onClick={commonState?.updateHandler}>
             {commonState?.saveLoading ? (
               <Loader2 className="h-4 w-4 animate-spin" />
             ) : (
