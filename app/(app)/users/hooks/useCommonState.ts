@@ -164,13 +164,17 @@ const useUsersState = () => {
   const listData = async () => {
     try {
       setListLoading(true);
-      const userData = await api.callApi({
+      const response = await api.callApi({
         url: BE_ROUTES.GET_USERS,
         method: HttpMethod.GET,
       });
-      setUsers(userData);
-    } catch (error) {
-      console.error("Error fetching data:", error);
+      setUsers(response?.data);
+    } catch (error: any) {
+      toast({
+        variant: "destructive",
+        title: "Error while fetching.",
+        description: error?.response?.data?.message || "",
+      });
     } finally {
       setListLoading(false);
     }
