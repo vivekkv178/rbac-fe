@@ -1,0 +1,37 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Usecase" />
+
+# Usecase Summary for the RBAC Application
+
+This usecase diagram outlines the actions for each role within the RBAC application, emphasizing the functionality available to Users, Admins, and Super Admins. The structure ensures a clear delineation of responsibilities and access rights, facilitating effective user management while maintaining security protocols.
+
+![RBAC Usecase Diagram](https://raw.githubusercontent.com/vivekkv178/cdn/main/rbac/Usecase.png)
+
+---
+
+#### Actors and Actions:
+
+1. **User**:
+
+   - **Sign Up**: Users can create a new account by providing required information (e.g., username, password, email).
+   - **Sign In**: Users can log into their accounts by entering their credentials (username and password).
+   - **Manage Users**:
+     - **View Users**: Users can see all the users in the DB.
+
+2. **Admin**:
+
+   - **Sign Up**: Admins can also create new user accounts, similar to regular users.
+   - **Sign In**: Admins can log into their accounts.
+   - **Manage Users**:
+     - **View User Details**: Admins can access and view information about specific users.
+     - **Update User**: Admins can modify existing user information.
+
+3. **Super Admin**:
+   - **Sign Up**: Super Admins can create new user accounts.
+   - **Sign In**: Super Admins can log into their accounts.
+   - **Manage Users**:
+     - **Add User**: Super Admins can create new user accounts.
+     - **View User Details**: Super Admins can access and view information about all users.
+     - **Update User**: Super Admins can modify any user's information.
+     - **Delete User**: Super Admins can remove any user account from the system.

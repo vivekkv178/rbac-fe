@@ -1,0 +1,117 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Configurations" />
+
+# Configurations to Run Application
+
+## Frontend Environment Variables
+
+<table>
+  <thead>
+    <tr>
+      <th style={{ padding: "10px", border: "1px solid black" }}>S.No</th>
+      <th style={{ padding: "10px", border: "1px solid black" }}>
+        Configuration
+      </th>
+      <th style={{ padding: "10px", border: "1px solid black" }}>
+        Description
+      </th>
+      <th style={{ padding: "10px", border: "1px solid black" }}>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style={{ padding: "10px", border: "1px solid black" }}>1</td>
+      <td style={{ padding: "10px", border: "1px solid black" }}>
+        REACT_APP_API_URL
+      </td>
+      <td style={{ padding: "10px", border: "1px solid black" }}>
+        Base URL for API calls
+      </td>
+      <td style={{ padding: "10px", border: "1px solid black" }}>
+        http://localhost:3000/api
+      </td>
+    </tr>
+    <tr>
+      <td style={{ padding: "10px", border: "1px solid black" }}>2</td>
+      <td style={{ padding: "10px", border: "1px solid black" }}>
+        REACT_APP_ENV
+      </td>
+      <td style={{ padding: "10px", border: "1px solid black" }}>
+        Environment mode (development/production)
+      </td>
+      <td style={{ padding: "10px", border: "1px solid black" }}>
+        development
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+## Backend Environment Variables
+
+<table>
+  <thead>
+    <tr>
+      <th style={{ padding: "10px", border: "1px solid black" }}>S.No</th>
+      <th style={{ padding: "10px", border: "1px solid black" }}>
+        Configuration
+      </th>
+      <th style={{ padding: "10px", border: "1px solid black" }}>
+        Description
+      </th>
+      <th style={{ padding: "10px", border: "1px solid black" }}>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style={{ padding: "10px", border: "1px solid black" }}>1</td>
+      <td style={{ padding: "10px", border: "1px solid black" }}>
+        MONGODB_URI
+      </td>
+      <td style={{ padding: "10px", border: "1px solid black" }}>
+        Connection URI for MongoDB
+      </td>
+      <td style={{ padding: "10px", border: "1px solid black" }}>
+        mongodb://localhost:27017/mydatabase
+      </td>
+    </tr>
+    <tr>
+      <td style={{ padding: "10px", border: "1px solid black" }}>2</td>
+      <td style={{ padding: "10px", border: "1px solid black" }}>JWT_SECRET</td>
+      <td style={{ padding: "10px", border: "1px solid black" }}>
+        Secret key for signing JWT tokens
+      </td>
+      <td style={{ padding: "10px", border: "1px solid black" }}>
+        mysecretkey
+      </td>
+    </tr>
+    <tr>
+      <td style={{ padding: "10px", border: "1px solid black" }}>3</td>
+      <td style={{ padding: "10px", border: "1px solid black" }}>NODE_ENV</td>
+      <td style={{ padding: "10px", border: "1px solid black" }}>
+        Environment mode (development/production)
+      </td>
+      <td style={{ padding: "10px", border: "1px solid black" }}>
+        development
+      </td>
+    </tr>
+    <tr>
+      <td style={{ padding: "10px", border: "1px solid black" }}>4</td>
+      <td style={{ padding: "10px", border: "1px solid black" }}>PORT</td>
+      <td style={{ padding: "10px", border: "1px solid black" }}>
+        Port on which the server will run
+      </td>
+      <td style={{ padding: "10px", border: "1px solid black" }}>3000</td>
+    </tr>
+    <tr>
+      <td style={{ padding: "10px", border: "1px solid black" }}>5</td>
+      <td style={{ padding: "10px", border: "1px solid black" }}>API_KEY</td>
+      <td style={{ padding: "10px", border: "1px solid black" }}>
+        API key for third-party services
+      </td>
+      <td style={{ padding: "10px", border: "1px solid black" }}>
+        your-api-key
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,65 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="User-Journey" />
+
+# User Journey Summary
+
+This summary provides a clear and structured overview of the user journey within your RBAC application, ensuring that both users and administrators understand their interactions with the system. If you need any further details or modifications, let me know!
+
+![Alt Text](https://raw.githubusercontent.com/vivekkv178/cdn/main/rbac/User_Journey.png)
+
+## User Journey Steps
+
+1. **Start**:
+
+   - The user initiates interaction with the application.
+
+2. **User Choice**:
+
+   - The user is presented with three options:
+     - **Sign Up**: Proceed to the registration process.
+     - **Sign In**: Access an existing account.
+     - **Logout**: Exit the application if the user is already logged in.
+
+3. **User Registration (Sign Up)**:
+
+   - If the user selects **Sign Up**:
+     - The user accesses the registration page.
+     - Fills out the registration form with required information.
+     - Submits the form to create an account.
+     - An API call is made to save user data in the database.
+     - On successful registration, user is redirected to home page.
+
+4. **Sign In**:
+
+   - If the user selects **Sign In**:
+     - The user navigates to the login page.
+     - Inputs credentials (username and password) and submits the sign-in form.
+     - An API call verifies the credentials.
+     - On successful authentication, a token is generated and stored in cookies.
+     - The user is redirected to the home page, where a welcome message is displayed.
+
+5. **User Actions**:
+
+   - Once logged in, the user has the following options:
+     - **Manage Users**: The user can view and update users profile information.
+     - **Logout**: The user can log out by clicking the logout button, which returns them to the login page.
+
+6. **Logout Process**:
+
+   - If the user selects **Logout** at any point:
+     - The token is removed from cookies.
+     - The user is redirected to the login page.
+
+7. **Admin Functionality** (if the user has admin privileges):
+
+   - The admin accesses the user management section.
+   - The admin can:
+     - **View Users**: See a list of all users.
+     - **Edit User Information**: Update user details as needed.
+     - **Delete Users**: Remove users as required.
+     - **Add Users**: Create new users if needed.
+   - The admin can also choose to **Logout** at any time during this process.
+
+8. **End**:
+   - The user journey concludes either by logging out or completing user management tasks.

@@ -1,0 +1,39 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Sequence" />
+
+# Sequence Summary for the RBAC Application
+
+This sequence highlights the core functionality of the RBAC app, focusing on user authentication (sign-up and sign-in), role management (CRUD operations), and session control (login and logout).
+
+![RBAC Sequence Diagram](https://raw.githubusercontent.com/vivekkv178/cdn/main/rbac/Seq_Diagram.png)
+
+## Key Actions:
+
+### 1. **User Registration (Sign Up):**
+
+- The **User** fills in the sign-up form and submits it.
+- The **Front-End (FE) App** triggers the sign-up API with the user data.
+- The **Back-End (BE) App** processes the request and creates a new user in the **Database**.
+- The **BE App** generates an authentication token and sends it back to the **FE App**.
+- The **FE App** stores the token in a cookie and redirects the user to the home page.
+
+### 2. **User Management (CRUD Operations):**
+
+- The **User** accesses the "Manage Users" page (if they have the appropriate permissions).
+- The **User** performs actions like adding, editing, or deleting a user.
+- The **FE App** sends the corresponding API request to the **BE App**.
+- The **BE App** processes the request and updates the **Database** accordingly.
+
+### 3. **User Logout:**
+
+- The **User** logs out of the application.
+- The **FE App** deletes the authentication token from the cookies and redirects the user to the login page.
+
+### 4. **User Login (Sign In):**
+
+- The **User** enters their login credentials (email and password) on the login page.
+- The **FE App** triggers the login API, sending the credentials to the **BE App**.
+- The **BE App** verifies the credentials and checks the user's role and permissions.
+- Upon successful authentication, the **BE App** generates a new token and returns it to the **FE App**.
+- The **FE App** stores the token in a cookie and redirects the user to the home page, granting access based on their role.
