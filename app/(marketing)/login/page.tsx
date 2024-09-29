@@ -7,12 +7,6 @@ import Forgot from "./components/Forgot";
 import { FORGOT, SIGN_IN, SIGN_UP } from "./utils/constants";
 import { Toaster } from "@vivekkv178/library";
 
-export type LoginPageProps = {
-  NavigationComponent: React.ElementType;
-  signInHandler: (user: unknown) => void;
-  signUpHandler: (user: unknown) => void;
-};
-
 const Auth = () => {
   const { commonState } = useAuthContext();
 
@@ -41,10 +35,10 @@ const Auth = () => {
   );
 };
 
-const AuthPage = (props: LoginPageProps) => {
+const AuthPage = () => {
   return (
     <>
-      <AuthProvider loginPageProps={props}>
+      <AuthProvider>
         <Auth />
         <Toaster />
       </AuthProvider>

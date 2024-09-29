@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { LoginPageProps } from "../page";
 import { SIGN_IN } from "../utils/constants";
 import { toast } from "@vivekkv178/library";
 import { useAppDispatch, useAppSelector } from "@/lib/reduxHooks";
@@ -14,7 +13,7 @@ import {
 import useApi from "@/lib/useApi";
 import { setCookie } from "cookies-next";
 
-const useCommonState = (props: LoginPageProps) => {
+const useCommonState = () => {
   const router = useRouter();
   const [authComponent, setAuthComponent] = useState(SIGN_IN);
   const [loading, setLoading] = useState(false);

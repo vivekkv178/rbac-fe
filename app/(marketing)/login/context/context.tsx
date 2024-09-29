@@ -1,6 +1,5 @@
 import React, { Dispatch, createContext, useContext } from "react";
 import useCommonState from "../hooks/useCommonState";
-import { LoginPageProps } from "../page";
 
 type CommonState = {
   // Define the structure of your common state here
@@ -17,23 +16,18 @@ type CommonState = {
 
 type AuthContextType = {
   commonState: CommonState;
-  loginPageProps: LoginPageProps;
 };
 
 type AuthProviderProps = {
   children: React.ReactNode;
-  loginPageProps: LoginPageProps;
 };
 
 const AuthContext = createContext<AuthContextType | null>(null);
 
-export const AuthProvider: React.FC<AuthProviderProps> = ({
-  children,
-  loginPageProps,
-}) => {
-  const commonState = useCommonState(loginPageProps); // Assuming this returns CommonState
+export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
+  const commonState = useCommonState(); // Assuming this returns CommonState
   return (
-    <AuthContext.Provider value={{ commonState, loginPageProps }}>
+    <AuthContext.Provider value={{ commonState }}>
       {children}
     </AuthContext.Provider>
   );
