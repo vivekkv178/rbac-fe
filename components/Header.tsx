@@ -41,6 +41,7 @@ const Header = () => {
             nested: true,
             subRoutes: [
               { path: "/#features", name: "Features" },
+              { path: "/#api-docs", name: "API Docs" },
               { path: "/#documentation", name: "Documentation" },
             ],
           },

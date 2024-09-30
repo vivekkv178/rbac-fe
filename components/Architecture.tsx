@@ -24,7 +24,7 @@ const Architecture = () => {
         </div>
         <div className="mx-auto">
           <img
-            src="https://raw.githubusercontent.com/vivekkv178/cdn/main/rbac/Architecture.gif"
+            src={`${process?.env?.NEXT_PUBLIC_CDN_PATH}/rbac/Architecture.gif`}
             className="mx-auto tw-h-3/4 tw-w-3/4"
           />
         </div>

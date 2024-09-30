@@ -23,7 +23,7 @@ const Usecase = () => {
         </div>
         <div className="mx-auto">
           <img
-            src="https://raw.githubusercontent.com/vivekkv178/cdn/main/rbac/Usecase.png"
+            src={`${process?.env?.NEXT_PUBLIC_CDN_PATH}/rbac/Usecase.png`}
             className="mx-auto tw-rounded-sm tw-h-80"
           />
         </div>
