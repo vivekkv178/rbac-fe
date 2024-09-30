@@ -98,7 +98,7 @@ const useCommonState = () => {
     } catch (error: any) {
       toast({
         variant: "destructive",
-        title: "Error while adding.",
+        title: "Error while sign in.",
         description: error?.response?.data?.message || "",
       });
     } finally {
