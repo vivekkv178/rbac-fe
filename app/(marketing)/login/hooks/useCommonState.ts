@@ -86,7 +86,10 @@ const useCommonState = () => {
       const apiResponse = await api.callApi({
         url: BE_ROUTES.SIGN_IN,
         method: HttpMethod.POST,
-        data: formData,
+        data: {
+          email: formData?.email,
+          password: formData?.password,
+        },
       });
       signInHandler(apiResponse);
       toast({

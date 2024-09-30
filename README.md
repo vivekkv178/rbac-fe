@@ -71,7 +71,7 @@ Make sure to set up your environment variables. Create a `.env` file in the root
 ```plaintext
 NEXT_PUBLIC_STORYBOOK_URL=https://main--<projectid>.chromatic.com/
 NEXT_PUBLIC_CDN_PATH=https://raw.githubusercontent.com/vivekkv178/cdn/main
-NEXT_PUBLIC_RBAC_BE_URL=https://localhost:3001
+NEXT_PUBLIC_RBAC_BE_URL=http://localhost:3001
 NEXT_PUBLIC_FIREBASE_API_KEY=test
 NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=test
 NEXT_PUBLIC_FIREBASE_PROJECT_ID=test

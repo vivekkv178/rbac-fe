@@ -23,26 +23,98 @@ import { Meta } from "@storybook/blocks";
     <tr>
       <td style={{ padding: "10px", border: "1px solid black" }}>1</td>
       <td style={{ padding: "10px", border: "1px solid black" }}>
-        REACT_APP_API_URL
+        NEXT_PUBLIC_STORYBOOK_URL
       </td>
       <td style={{ padding: "10px", border: "1px solid black" }}>
-        Base URL for API calls
+        URL for the Storybook UI
       </td>
       <td style={{ padding: "10px", border: "1px solid black" }}>
-        http://localhost:3000/api
+        https://main--&lt;projectid&gt;.chromatic.com/
       </td>
     </tr>
     <tr>
       <td style={{ padding: "10px", border: "1px solid black" }}>2</td>
       <td style={{ padding: "10px", border: "1px solid black" }}>
-        REACT_APP_ENV
+        NEXT_PUBLIC_CDN_PATH
       </td>
       <td style={{ padding: "10px", border: "1px solid black" }}>
-        Environment mode (development/production)
+        Base path for CDN assets
       </td>
       <td style={{ padding: "10px", border: "1px solid black" }}>
-        development
+        https://raw.githubusercontent.com/vivekkv178/cdn/main
       </td>
+    </tr>
+    <tr>
+      <td style={{ padding: "10px", border: "1px solid black" }}>3</td>
+      <td style={{ padding: "10px", border: "1px solid black" }}>
+        NEXT_PUBLIC_RBAC_BE_URL
+      </td>
+      <td style={{ padding: "10px", border: "1px solid black" }}>
+        Base URL for Backend API calls
+      </td>
+      <td style={{ padding: "10px", border: "1px solid black" }}>
+        http://localhost:3001
+      </td>
+    </tr>
+    <tr>
+      <td style={{ padding: "10px", border: "1px solid black" }}>4</td>
+      <td style={{ padding: "10px", border: "1px solid black" }}>
+        NEXT_PUBLIC_FIREBASE_API_KEY
+      </td>
+      <td style={{ padding: "10px", border: "1px solid black" }}>
+        Firebase API key (Required for library setup)
+      </td>
+      <td style={{ padding: "10px", border: "1px solid black" }}>test</td>
+    </tr>
+    <tr>
+      <td style={{ padding: "10px", border: "1px solid black" }}>5</td>
+      <td style={{ padding: "10px", border: "1px solid black" }}>
+        NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN
+      </td>
+      <td style={{ padding: "10px", border: "1px solid black" }}>
+        Firebase Auth domain (Required for library setup)
+      </td>
+      <td style={{ padding: "10px", border: "1px solid black" }}>test</td>
+    </tr>
+    <tr>
+      <td style={{ padding: "10px", border: "1px solid black" }}>6</td>
+      <td style={{ padding: "10px", border: "1px solid black" }}>
+        NEXT_PUBLIC_FIREBASE_PROJECT_ID
+      </td>
+      <td style={{ padding: "10px", border: "1px solid black" }}>
+        Firebase Project ID (Required for library setup)
+      </td>
+      <td style={{ padding: "10px", border: "1px solid black" }}>test</td>
+    </tr>
+    <tr>
+      <td style={{ padding: "10px", border: "1px solid black" }}>7</td>
+      <td style={{ padding: "10px", border: "1px solid black" }}>
+        NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET
+      </td>
+      <td style={{ padding: "10px", border: "1px solid black" }}>
+        Firebase Storage Bucket (Required for library setup)
+      </td>
+      <td style={{ padding: "10px", border: "1px solid black" }}>test</td>
+    </tr>
+    <tr>
+      <td style={{ padding: "10px", border: "1px solid black" }}>8</td>
+      <td style={{ padding: "10px", border: "1px solid black" }}>
+        NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID
+      </td>
+      <td style={{ padding: "10px", border: "1px solid black" }}>
+        Firebase Messaging Sender ID (Required for library setup)
+      </td>
+      <td style={{ padding: "10px", border: "1px solid black" }}>test</td>
+    </tr>
+    <tr>
+      <td style={{ padding: "10px", border: "1px solid black" }}>9</td>
+      <td style={{ padding: "10px", border: "1px solid black" }}>
+        NEXT_PUBLIC_FIREBASE_APP_ID
+      </td>
+      <td style={{ padding: "10px", border: "1px solid black" }}>
+        Firebase App ID (Required for library setup)
+      </td>
+      <td style={{ padding: "10px", border: "1px solid black" }}>test</td>
     </tr>
   </tbody>
 </table>
@@ -65,52 +137,42 @@ import { Meta } from "@storybook/blocks";
   <tbody>
     <tr>
       <td style={{ padding: "10px", border: "1px solid black" }}>1</td>
+      <td style={{ padding: "10px", border: "1px solid black" }}>MONGO_URL</td>
       <td style={{ padding: "10px", border: "1px solid black" }}>
-        MONGODB_URI
+        MongoDB connection URL
       </td>
       <td style={{ padding: "10px", border: "1px solid black" }}>
-        Connection URI for MongoDB
-      </td>
-      <td style={{ padding: "10px", border: "1px solid black" }}>
-        mongodb://localhost:27017/mydatabase
+        mongodb+srv://&lt;username&gt;:&lt;password&gt;@&lt;cluster&gt;/&lt;dbname&gt;?retryWrites=true&w=majority&appName=&lt;appname&gt;
       </td>
     </tr>
     <tr>
       <td style={{ padding: "10px", border: "1px solid black" }}>2</td>
+      <td style={{ padding: "10px", border: "1px solid black" }}>
+        TYPEORM_LOGGING
+      </td>
+      <td style={{ padding: "10px", border: "1px solid black" }}>
+        Enable or disable logging for TypeORM
+      </td>
+      <td style={{ padding: "10px", border: "1px solid black" }}>false</td>
+    </tr>
+    <tr>
+      <td style={{ padding: "10px", border: "1px solid black" }}>3</td>
       <td style={{ padding: "10px", border: "1px solid black" }}>JWT_SECRET</td>
       <td style={{ padding: "10px", border: "1px solid black" }}>
         Secret key for signing JWT tokens
       </td>
-      <td style={{ padding: "10px", border: "1px solid black" }}>
-        mysecretkey
-      </td>
-    </tr>
-    <tr>
-      <td style={{ padding: "10px", border: "1px solid black" }}>3</td>
-      <td style={{ padding: "10px", border: "1px solid black" }}>NODE_ENV</td>
-      <td style={{ padding: "10px", border: "1px solid black" }}>
-        Environment mode (development/production)
-      </td>
-      <td style={{ padding: "10px", border: "1px solid black" }}>
-        development
-      </td>
+      <td style={{ padding: "10px", border: "1px solid black" }}>secret</td>
     </tr>
     <tr>
       <td style={{ padding: "10px", border: "1px solid black" }}>4</td>
-      <td style={{ padding: "10px", border: "1px solid black" }}>PORT</td>
       <td style={{ padding: "10px", border: "1px solid black" }}>
-        Port on which the server will run
-      </td>
-      <td style={{ padding: "10px", border: "1px solid black" }}>3000</td>
-    </tr>
-    <tr>
-      <td style={{ padding: "10px", border: "1px solid black" }}>5</td>
-      <td style={{ padding: "10px", border: "1px solid black" }}>API_KEY</td>
-      <td style={{ padding: "10px", border: "1px solid black" }}>
-        API key for third-party services
+        OPEN_API_DOMAIN
       </td>
       <td style={{ padding: "10px", border: "1px solid black" }}>
-        your-api-key
+        Base URL for the OpenAPI domain
+      </td>
+      <td style={{ padding: "10px", border: "1px solid black" }}>
+        http://localhost:3001
       </td>
     </tr>
   </tbody>
